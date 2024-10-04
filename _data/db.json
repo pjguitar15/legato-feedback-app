@@ -1,0 +1,109 @@
+{
+  "feedbacks": [
+    {
+      "title": "Speakers Too Quiet",
+      "description": "The sound from the speakers was too low for the audience to hear clearly at the back.",
+      "type": "complain",
+      "feedbackOn": "gears",
+      "gears": {
+        "gearUsed": "Yamaha DXR10",
+        "condition": "good",
+        "soundQualityRating": 3,
+        "issueExperienced": ["low volume"]
+      },
+      "eventDate": "2024-08-25",
+      "images": [
+        {
+          "url": "https://example.com/event-quiet.jpg",
+          "description": "View of the event from the back."
+        }
+      ],
+      "actionTaken": "Volume was increased midway through the event.",
+      "clientName": "John Smith",
+      "contactInfo": "john.smith@example.com"
+    },
+    {
+      "title": "Perfect Sound Quality",
+      "description": "The sound system worked flawlessly throughout the event. Excellent clarity and volume.",
+      "type": "feedback",
+      "feedbackOn": "gears",
+      "gears": {
+        "gearUsed": "Yamaha MGP32X",
+        "condition": "excellent",
+        "soundQualityRating": 5,
+        "issueExperienced": []
+      },
+      "eventDate": "2024-08-30",
+      "images": [],
+      "actionTaken": null,
+      "clientName": "Maria Gonzalez",
+      "contactInfo": "maria.gonzalez@example.com"
+    },
+    {
+      "title": "Distorted Bass",
+      "description": "There was noticeable distortion in the bass frequencies, especially during the DJ set.",
+      "type": "complain",
+      "feedbackOn": "gears",
+      "gears": {
+        "gearUsed": "RCF 745A",
+        "condition": "needs maintenance",
+        "soundQualityRating": 2,
+        "issueExperienced": ["distortion"]
+      },
+      "eventDate": "2024-09-02",
+      "images": [
+        {
+          "url": "https://example.com/bass-distortion.jpg",
+          "description": "Audio equipment during the DJ set."
+        }
+      ],
+      "actionTaken": "Bass EQ was adjusted after complaints.",
+      "clientName": "Kevin Lee",
+      "contactInfo": "kevin.lee@example.com"
+    },
+    {
+      "title": "No Issues, Great Service",
+      "description": "The entire setup was done perfectly. No sound issues and everything was on time.",
+      "type": "feedback",
+      "feedbackOn": "gears",
+      "gears": {
+        "gearUsed": "RCF 745A",
+        "condition": "excellent",
+        "soundQualityRating": 5,
+        "issueExperienced": []
+      },
+      "eventDate": "2024-09-01",
+      "images": [
+        {
+          "url": "https://example.com/perfect-setup.jpg",
+          "description": "View of the sound setup at the event."
+        }
+      ],
+      "actionTaken": "No action needed.",
+      "clientName": "Emily Davis",
+      "contactInfo": "emily.davis@example.com"
+    },
+    {
+      "title": "Mic Cutting Out",
+      "description": "The microphone kept cutting out during the speeches, which caused interruptions.",
+      "type": "complain",
+      "feedbackOn": "gears",
+      "gears": {
+        "gearUsed": "Shure Wireless Mic",
+        "condition": "broken",
+        "soundQualityRating": 2,
+        "issueExperienced": ["cutting out"]
+      },
+      "eventDate": "2024-09-03",
+      "images": [
+        {
+          "url": "https://example.com/mic-issue.jpg",
+          "description": "Close-up of the mic setup."
+        }
+      ],
+      "actionTaken": "Backup microphone was used to resolve the issue.",
+      "clientName": "Alexis Moore",
+      "contactInfo": "alexis.moore@example.com"
+    }
+  ]
+}

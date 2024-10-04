@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -6,38 +6,63 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { buttonVariants } from '@/components/ui/button';
+import { FeedbackCardType } from '@/types/FeedbackType';
+import Link from 'next/link';
 
-export default function FeedbackCard() {
+const FeedbackCard: React.FC<FeedbackCardType> = ({
+  id,
+  title,
+  description,
+  type,
+  feedbackOn,
+  gears,
+  eventDate,
+}) => {
   return (
-    <Card className='w-[350px]'>
+    <Card className='w-full'>
       <CardHeader>
-        <CardTitle>Crew not on Uniform</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription className='text-clip'>
-          {`I think you should be more professional and not disturb the events. I noticed that your crew member was not wearing your uniform either. I think that has to be changed. Just a feedback from your client. I want your company to improve.`
-            .split(" ")
-            .slice(0, 16)
-            .join(" ") + "..."}
+          {description.split(' ').slice(0, 30).join(' ') + '..'}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form>
-          <div className='grid w-full items-center gap-4'>
+          <div className='grid w-full items-center gap-4 capitalize'>
             <div className='flex align-center'>
-              <Label htmlFor='name'>Type: </Label>
+              <Label htmlFor='name'>Type: {type}</Label>
             </div>
             <div className='flex flex-col space-y-1.5'>
-              <Label htmlFor='framework'>Framework</Label>
+              <Label htmlFor='framework'>Feedback on: {feedbackOn}</Label>
+            </div>
+            <div className='flex flex-col space-y-1.5'>
+              <Label htmlFor='framework'>
+                Gear Feedback: {gears.gearUsed} | {gears.condition} |{' '}
+                {gears.soundQualityRating} | {gears.issueExperienced[0]}
+              </Label>
+            </div>
+            <div className='flex flex-col space-y-1.5'>
+              <Label htmlFor='framework'>
+                Event Date: {eventDate.toString()}
+              </Label>
             </div>
           </div>
         </form>
       </CardContent>
       <CardFooter className='flex justify-between'>
-        <Button>View Feedback</Button>
+        <Link
+          href={`/feedback/${id}`}
+          className={buttonVariants({ variant: 'outline' })}
+        >
+          View Feedback
+        </Link>
         {/* <Button variant='outline'>Cancel</Button> */}
       </CardFooter>
     </Card>
   );
-}
+};
+
+export default FeedbackCard;
